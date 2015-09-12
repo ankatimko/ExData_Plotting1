@@ -11,7 +11,8 @@ lines(df$timestamp,as.numeric(as.character(df$Sub_metering_2)),col="red")
 lines(df$timestamp,as.numeric(as.character(df$Sub_metering_3)),col="blue")
 legend("topright",inset=.05, col=c("black","red","blue"), c("Sub_metering_1  ","Sub_metering_2  ", "Sub_metering_3  "),lty=c(1,1), lwd=c(1,1))
 
-plot(df$timestamp,df$Global_reactive_power,ylab="Global_reactive_power",xlab="datetime")
+plot(df$timestamp,df$Global_reactive_power,type = "l",ylab="Global_reactive_power",xlab="datetime")
 
 dev.copy(png, file="plot4.png", width=480, height=480)
 dev.off()
+
